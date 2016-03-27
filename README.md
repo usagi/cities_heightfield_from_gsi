@@ -99,7 +99,7 @@ bin/citis_heightfield_from_gsi --help
 
 ### Download a build binary ( Windows Only )
 
-- https://github.com/usagi/citis_heightfield_from_gsi/releases
+- https://github.com/usagi/cities_heightfield_from_gsi/releases
 
 ## License
 
