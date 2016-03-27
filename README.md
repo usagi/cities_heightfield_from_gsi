@@ -43,7 +43,7 @@ Note: Images in this examples, that's using GSI DEM tiles and GSI Relief tiles. 
 bin/citis_heightfield_from_gsi --latitude 43.062096 --longitude 141.354376 --out Sapporo-shi_Hokkaido_Japan.png
 ```
 
-![image/Sapporo-shi_Hokkaido_Japan.png]
+![Sapporo-shi](image/Sapporo-shi_Hokkaido_Japan.png)
 
 #### eg.2 Rebun-chou, Hokkaido, Japan // 礼文町＠北海道
 
@@ -51,7 +51,7 @@ bin/citis_heightfield_from_gsi --latitude 43.062096 --longitude 141.354376 --out
 bin/citis_heightfield_from_gsi --latitude 45.302965 --longitude 141.047802 --out Rebun-chou_Hokkaido_Japan.png
 ```
 
-![image/Rebun-chou_Hokkaido_Japan.png]
+![Rebun-chou](image/Rebun-chou_Hokkaido_Japan.png)
 
 #### eg.3 Mashuuko, Hokkaido, Japan // 摩周湖＠北海道
 
@@ -59,7 +59,7 @@ bin/citis_heightfield_from_gsi --latitude 45.302965 --longitude 141.047802 --out
 bin/citis_heightfield_from_gsi --latitude 43.5789292 --longitude 144.5040268 --out Mashuuko_Hokkaido_Japan.png
 ```
 
-![image/Mashuuko_Hokkaido_Japan.png]
+![Mashuuko](image/Mashuuko_Hokkaido_Japan.png)
 
 #### eg.4 Mutsu, Aomori, Japan // 陸奥＠青森
 
@@ -67,7 +67,7 @@ bin/citis_heightfield_from_gsi --latitude 43.5789292 --longitude 144.5040268 --o
 bin/citis_heightfield_from_gsi --latitude 41.2925597 --longitude 141.1843692 --out Mashuuko_Hokkaido_Japan.png
 ```
 
-![image/Mutsu-shi_Aomori_Japan.png]
+![Mutsu](image/Mutsu-shi_Aomori_Japan.png)
 
 #### eg.5 Wakamatsu, Goto, Nagasaki, Japan // 五島列島若松島＠長崎
 
@@ -75,7 +75,7 @@ bin/citis_heightfield_from_gsi --latitude 41.2925597 --longitude 141.1843692 --o
 bin/citis_heightfield_from_gsi --latitude 32.8734429 --longitude 129.0217592 --out Wakamatsu_Goto_Nagasaki_Japan.png
 ```
 
-![image/Wakamatsu_Goto_Nagasaki_Japan.png]
+![Wakamatsu_Goto](image/Wakamatsu_Goto_Nagasaki_Japan.png)
 
 ### eg.6 Ishigaki-shi, Okinawa, Japan // 石垣市＠沖縄
 
@@ -83,7 +83,7 @@ bin/citis_heightfield_from_gsi --latitude 32.8734429 --longitude 129.0217592 --o
 bin/citis_heightfield_from_gsi --latitude 24.3471766 --longitude 124.1403797 --out Ishigaki-shi_Okinawa_Japan.png
 ```
 
-![image/Ishigaki-shi_Okinawa_Japan.png]
+![Ishigaki](image/Ishigaki-shi_Okinawa_Japan.png)
 
 ### Version information
 
