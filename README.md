@@ -75,7 +75,7 @@ bin/citis_heightfield_from_gsi --latitude 41.2925597 --longitude 141.1843692 --o
 bin/citis_heightfield_from_gsi --latitude 32.8734429 --longitude 129.0217592 --out Wakamatsu_Goto_Nagasaki_Japan.png
 ```
 
-![Wakamatsu_Goto](image/Wakamatsu_Goto_Nagasaki_Japan.png)
+![Wakamatsu_Goto](image/Wakamatsu_Goto_Nagasaki.png)
 
 ### eg.6 Ishigaki-shi, Okinawa, Japan // 石垣市＠沖縄
 
