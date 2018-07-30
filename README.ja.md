@@ -47,25 +47,70 @@ cui --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_J
 
 ## 出力例
 
-### 例 日本北海道札幌円山; 43.04724, 141.315714
+### 例 日本・北海道・札幌・円山
 
 ```
-cui --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_Japan.png
+cities_heightfield_from_gsi --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_Japan.png
 ```
 
 ![Maruyama, Sapporo, Hokkaido, Japan](image/Maruyama_Sapporo_Hokkaido_Japan.png)
 
-### 例 日本岩手久慈; 
+### 例 日本・岩手・久慈
 
 ```
-cui --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_Japan.png
+cities_heightfield_from_gsi --longitude 141.775583 --latitude 40.190524 --out Kuji_Iwate_Japan.png
 ```
 
 ![Kuji, Iwate, Japan](image/Kuji_Iwate_Japan.png)
 
-### ビルド済みのバイナリーのダウンロード （ Windows だけ ）
+#### 例 日本・北海道・礼文
+
+```
+cities_heightfield_from_gsi --latitude 45.30302 --longitude 141.047689 --out Rebun_Hokkaido_Japan.png
+```
+
+![Rebun, Hokkaido, Japan](image/Rebun_Hokkaido_Japan.png)
+
+#### 例 日本・北海道・弟子屈・摩周湖
+
+```
+cities_heightfield_from_gsi --latitude 43.580411 --longitude 144.533489 --out Mashuuko_Teshikaga_Hokkaido_Japan.png
+```
+
+![Mashuuko, Teshikaga, Hokkaido, Japan](image/Mashuuko_Teshikaga_Hokkaido_Japan.png)
+
+#### 例 日本・青森・陸奥
+
+```
+citis_heightfield_from_gsi --latitude 41.292746 --longitude 141.183476 --out Mutsu_Aomori_Japan.png
+```
+
+![Mutsu, Aomori, Japan](image/Mutsu_Aomori_Japan.png)
+
+#### 例 日本・長崎・五島列島・若松
+
+```
+citis_heightfield_from_gsi --latitude 32.89027 --longitude 129.013749 --out Wakamatsu_Goto_Nagasaki_Japan.png
+```
+
+![Wakamatsu, Goto, Nagasaki, Japan](image/Wakamatsu_Goto_Nagasaki.png)
+
+### 例 日本・沖縄・石垣
+
+```
+citis_heightfield_from_gsi --latitude 24.340661 --longitude 124.15558 --out Ishigaki_Okinawa_Japan.png
+```
+![Ishigaki, Okinawa, Japan](image/Ishigaki_Okinawa_Japan.png)
+
+## 実行可能なバイナリーのダウンロード （ Windows だけ ）
 
 - https://github.com/usagi/cities_heightfield_from_gsi/releases
+
+### ソースからのビルド方法
+
+```
+cargo build --release
+```
 
 ## ライセンス
 

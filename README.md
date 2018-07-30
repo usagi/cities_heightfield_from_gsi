@@ -38,7 +38,7 @@ And, you input parameters in interactive.
 e.g.; (2) type usage
 
 ```
-cui --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_Japan.png
+cities_heightfield_from_gsi --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_Japan.png
 ```
 
 `gui` executable:
@@ -47,10 +47,10 @@ cui --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_J
 
 ## Output Examples
 
-### e.g. Maruyama, Sapporo, Hokkaido, Japan; 43.04724, 141.315714
+### e.g. Maruyama, Sapporo, Hokkaido, Japan
 
 ```
-cui --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_Japan.png
+cities_heightfield_from_gsi --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_Japan.png
 ```
 
 ![Maruyama, Sapporo, Hokkaido, Japan](image/Maruyama_Sapporo_Hokkaido_Japan.png)
@@ -58,40 +58,59 @@ cui --longitude 141.315714 --latitude 43.04724 --out Maruyama_Sapporo_Hokkaido_J
 ### e.g. Kuji, Iwate, Japan; 
 
 ```
-cui --longitude 141.775583 --latitude 40.190524 --out Kuji_Iwate_Japan.png
+cities_heightfield_from_gsi --longitude 141.775583 --latitude 40.190524 --out Kuji_Iwate_Japan.png
 ```
 
 ![Kuji, Iwate, Japan](image/Kuji_Iwate_Japan.png)
 
-#### eg.2 Rebun-chou, Hokkaido, Japan // 礼文町＠北海道
-```
-bin/citis_heightfield_from_gsi --latitude 45.30302 --longitude 141.047689 --out Rebun-chou_Hokkaido_Japan.png
-```
-#### eg.3 Mashuuko, Hokkaido, Japan // 摩周湖＠北海道
-```
-bin/citis_heightfield_from_gsi --latitude 43.580411 --longitude 144.533489 --out Mashuuko_Hokkaido_Japan.png
-```
-![Mashuuko](image/Mashuuko_Hokkaido_Japan.png)
-#### eg.4 Mutsu, Aomori, Japan // 陸奥＠青森
-```
-bin/citis_heightfield_from_gsi --latitude 41.292746 --longitude 141.183476 --out Mutsu_Aomori_Japan.png
-```
-![Mutsu](image/Mutsu-shi_Aomori_Japan.png)
-#### eg.5 Wakamatsu, Goto, Nagasaki, Japan // 五島列島若松島＠長崎
-```
-bin/citis_heightfield_from_gsi --latitude 32.89027 --longitude 129.013749 --out Wakamatsu_Goto_Nagasaki_Japan.png
-```
-![Wakamatsu_Goto](image/Wakamatsu_Goto_Nagasaki.png)
+#### eg.2 Rebun, Hokkaido, Japan
 
-### eg.6 Ishigaki-shi, Okinawa, Japan // 石垣市＠沖縄
 ```
-bin/citis_heightfield_from_gsi --latitude 24.340661 --longitude 124.15558 --out Ishigaki_Okinawa_Japan.png
+cities_heightfield_from_gsi --latitude 45.30302 --longitude 141.047689 --out Rebun_Hokkaido_Japan.png
 ```
-![Ishigaki](image/Ishigaki_Okinawa_Japan.png)
 
-### Download a build binary ( Windows Only )
+![Rebun, Hokkaido, Japan](image/Rebun_Hokkaido_Japan.png)
+
+#### eg.3 Mashuuko, Teshikaga, Hokkaido, Japan
+
+```
+cities_heightfield_from_gsi --latitude 43.580411 --longitude 144.533489 --out Mashuuko_Teshikaga_Hokkaido_Japan.png
+```
+
+![Mashuuko, Teshikaga, Hokkaido, Japan](image/Mashuuko_Teshikaga_Hokkaido_Japan.png)
+
+#### eg.4 Mutsu, Aomori, Japan
+
+```
+citis_heightfield_from_gsi --latitude 41.292746 --longitude 141.183476 --out Mutsu_Aomori_Japan.png
+```
+
+![Mutsu, Aomori, Japan](image/Mutsu_Aomori_Japan.png)
+
+#### eg.5 Wakamatsu, Goto, Nagasaki, Japan
+
+```
+citis_heightfield_from_gsi --latitude 32.89027 --longitude 129.013749 --out Wakamatsu_Goto_Nagasaki_Japan.png
+```
+
+![Wakamatsu, Goto, Nagasaki, Japan](image/Wakamatsu_Goto_Nagasaki.png)
+
+### eg.6 Ishigaki-shi, Okinawa, Japan
+
+```
+citis_heightfield_from_gsi --latitude 24.340661 --longitude 124.15558 --out Ishigaki_Okinawa_Japan.png
+```
+![Ishigaki, Okinawa, Japan](image/Ishigaki_Okinawa_Japan.png)
+
+### Download executable binary ( Windows Only )
 
 - https://github.com/usagi/cities_heightfield_from_gsi/releases
+
+### How to build from the souce
+
+```
+cargo build --release
+```
 
 ## License
 
