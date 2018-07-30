@@ -6,7 +6,7 @@ license = "MIT"
 description = "Height-field generator for Cities Skylines using GSI data"
 repository = "https://github.com/usagi/cities_heightfield_from_gsi"
 readme = "README.md"
-keywords = [ "Cities Skylines", "GSI", "generator", "height-field", "DEM" ]
+keywords = [ "Cities-Skylines", "GSI", "generator", "height-field", "DEM" ]
 categories = [ "games", "visualization" ]
 exclude = [ "image/*" ]
 
