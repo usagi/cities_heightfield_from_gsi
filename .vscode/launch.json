@@ -1,0 +1,28 @@
+{ "version": "0.2.0"
+, "configurations":
+  [ { "name": "debug cui"
+    , "type": "cppvsdbg"
+    , "request": "launch"
+    , "program": "${workspaceRoot}/target/debug/cui"
+    , "args": []
+    , "stopAtEntry": false
+    , "cwd": "${workspaceFolder}"
+    , "environment": []
+    , "externalConsole": false
+    , "preLaunchTask": "cargo build debug"
+    , "internalConsoleOptions": "openOnSessionStart"
+    }
+  , { "name": "debug gui"
+    , "type": "cppvsdbg"
+    , "request": "launch"
+    , "program": "${workspaceRoot}/target/debug/gui"
+    , "args": []
+    , "stopAtEntry": false
+    , "cwd": "${workspaceFolder}"
+    , "environment": []
+    , "externalConsole": false
+    , "preLaunchTask": "cargo build debug"
+    , "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

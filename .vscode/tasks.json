@@ -1,0 +1,44 @@
+{ "version": "2.0.0"
+, "tasks":
+  [ { "label": "cargo clean"
+    , "type":"shell"
+    , "command": "cargo"
+    , "args": [ "clean" ]
+    , "problemMatcher": []
+    , "presentation": { "panel": "new" }
+    }
+  , { "label": "cargo build debug"
+    , "type":"shell"
+    , "command": "cargo"
+    , "args": [ "build" ]
+    , "group":
+      { "kind": "build"
+      , "isDefault": true
+      }
+    , "problemMatcher": "$rustc"
+    , "presentation": { "panel": "new" }
+    }
+  , { "label": "cargo build release"
+    , "type":"shell"
+    , "command": "cargo"
+    , "args": [ "build", "--release" ]
+    , "group": "build"
+    , "problemMatcher": "$rustc"
+    , "presentation": { "panel": "new" }
+    }
+  , { "label": "cargo package"
+    , "type":"shell"
+    , "command": "cargo"
+    , "args": [ "package" ]
+    , "problemMatcher": []
+    , "presentation": { "panel": "new" }
+    }
+  , { "label": "cargo publish"
+    , "type":"shell"
+    , "command": "cargo"
+    , "args": [ "publish" ]
+    , "problemMatcher": []
+    , "presentation": { "panel": "new" }
+    }
+  ]
+}

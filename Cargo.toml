@@ -1,0 +1,19 @@
+[package]
+name = "cities_heightfield_from_gsi"
+version = "1.0.0"
+authors = ["Usagi Ito <usagi@WonderRabbitProject.net>"]
+license = "MIT"
+description = "Height-field generator for Cities Skylines using GSI data"
+repository = "https://github.com/usagi/cities_heightfield_from_gsi"
+readme = "README.md"
+keywords = [ "Cities Skylines", "GSI", "generator", "height-field", "DEM" ]
+categories = [ "games", "visualization" ]
+exclude = [ "image/*" ]
+
+[dependencies]
+reqwest = "0.8.6"
+image = "0.19.0"
+lazy_static = "1.0.2"
+resize = "0.3.0"
+num = "0.2.0"
+getopts = "0.2.18"
