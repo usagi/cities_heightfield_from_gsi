@@ -36,9 +36,9 @@ fn interactive_mode()
 {
   println!( "[ Interactive Mode ]" );
   println!( "  : ... ( Press CTRL + C if you want to exit halfway ) ...", );
-  println!( "  : Input the Longitude of a target in degrees ( e.g. 141.315714 )" );
+  println!( "  : Input the Longitude of the target in degrees ( e.g. 141.315714 )" );
   let longitude: f64 = read();
-  println!( "  : Input the Longitude of a target in degrees ( e.g. 43.04724 )> " );
+  println!( "  : Input the Latitude of the target in degrees ( e.g. 43.04724 )> " );
   let latitude: f64 = read();
   println!( "  : Input the path of the output PNG file ( e.g. out.png )> " );
   let out_path: String = read();

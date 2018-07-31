@@ -1,6 +1,6 @@
 [package]
 name = "cities_heightfield_from_gsi"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Usagi Ito <usagi@WonderRabbitProject.net>"]
 license = "MIT"
 description = "Height-field generator for Cities Skylines using GSI data"
