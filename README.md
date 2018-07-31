@@ -24,13 +24,12 @@ Options:
     -o, --out out.png   set output file path
     -h, --help          show this help
     -v, --version       show the app version
-    -s, --silent        make silent the app
 ```
 
 e.g.; (1) type usage
 
 ```
-cui
+cities_heightfield_from_gsi
 ```
 
 And, you input parameters in interactive.

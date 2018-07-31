@@ -24,13 +24,12 @@ Options:
     -o, --out out.png   出力ファイルのパスを設定
     -h, --help          このヘルプを表示
     -v, --version       このアプリのバージョン情報を表示
-    -s, --silent        このアプリを沈黙動作にします
 ```
 
 例; (1) の使い方
 
 ```
-cui
+cities_heightfield_from_gsi
 ```
 
 実行したら、対話的にパラメーターを入力します。
