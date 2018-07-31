@@ -93,7 +93,7 @@ citis_heightfield_from_gsi --latitude 41.292746 --longitude 141.183476 --out Mut
 citis_heightfield_from_gsi --latitude 32.89027 --longitude 129.013749 --out Wakamatsu_Goto_Nagasaki_Japan.png
 ```
 
-![Wakamatsu, Goto, Nagasaki, Japan](image/Wakamatsu_Goto_Nagasaki.png)
+![Wakamatsu, Goto, Nagasaki, Japan](image/Wakamatsu_Goto_Nagasaki_Japan.png)
 
 ### 例 日本・沖縄・石垣
 
