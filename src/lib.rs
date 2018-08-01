@@ -180,7 +180,7 @@ fn crop( scaled_data: &[ u16 ], scaled_width: usize, roi_rx: f64, roi_ry: f64 )
   println!( "[ CROPPING ]" );
   let scaled_height = scaled_data.len() / scaled_width;
   println!( "  : from {:>7} [px] * {:>7} [px]", scaled_width, scaled_height );
-  println!( "  : to   {v:>7} [px] * {v:>7} [px]", v = cities_skylines::consts::METERS_PER_TILE_ARRIS );
+  println!( "  : to   {v:>7} [px] * {v:>7} [px]", v = cities_skylines::consts::PIXELS_PER_TILE_ARRIS );
   println!( "  : ... ( PROCESSING; Wait a moment please. ) ..." );
   // final pixels
   let mut cropped_data = vec! [ 0u16; cities_skylines::consts::PIXELS_PER_TILE ];
