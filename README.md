@@ -127,6 +127,10 @@ cargo build --release
 Usagi Ito<usagi@WonderRabbitProject.net>
 Made in Sapporo, Hokkaido, Japan.
 
+## Special Thanks
+
+Ryuichiro Nagahama; several bug reports and propose feature requests.
+
 ## References
 
 - http://www.skylineswiki.com/Map_Editor

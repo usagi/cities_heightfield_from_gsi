@@ -127,6 +127,10 @@ cargo build --release
 伊藤 兎<usagi@WonderRabbitProject.net>
 北海道札幌産。
 
+## Special Thanks
+
+長濱 龍一郎; バグレポートと機能追加の提案。
+
 ## 参考
 
 - http://www.skylineswiki.com/Map_Editor
