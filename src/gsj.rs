@@ -25,7 +25,7 @@ pub fn decode_altitudes_from_png_nishioka_nagatsu_2015( source: DynamicImage, sc
     if r == 128 && g == 0 && b == 0
     { continue; }
     
-    let tmp = r as u32 * 256 * 256 + g as u32 * 256 + b as u32;
+    let tmp = r as i32 * 256 * 256 + g as i32 * 256 + b as i32;
     let altitude_in_meter = scaling *
       if tmp < ( 1 << 23 )
       { tmp as f64 }

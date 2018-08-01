@@ -3,10 +3,35 @@
   [ { "name": "debug cui"
     , "type": "cppvsdbg"
     , "request": "launch"
-    , "program": "${workspaceRoot}/target/debug/cui"
+    , "program": "${workspaceRoot}/target/debug/cities_heightfield_from_gsi"
     , "args": []
     , "stopAtEntry": false
-    , "cwd": "${workspaceFolder}"
+    , "cwd": "${workspaceRoot}/target/debug/"
+    , "environment": []
+    , "externalConsole": false
+    , "preLaunchTask": "cargo build debug"
+    , "internalConsoleOptions": "openOnSessionStart"
+    }
+  , { "name": "debug cui issue #3"
+    , "type": "cppvsdbg"
+    , "sourceLanguages": [ "rust" ]
+    , "request": "launch"
+    , "program": "${workspaceRoot}/target/debug/cities_heightfield_from_gsi"
+    , "args": [ "--longitude", "135.3948133", "--latitude", "34.6699245", "--out", "issue-3.png" ]
+    , "stopAtEntry": false
+    , "cwd": "${workspaceRoot}/target/debug/"
+    , "env": { "RUST_BACKTRACE": "1" }
+    , "externalConsole": false
+    , "preLaunchTask": "cargo build debug"
+    , "internalConsoleOptions": "openOnSessionStart"
+    }
+  , { "name": "debug cui maruyama"
+    , "type": "cppvsdbg"
+    , "request": "launch"
+    , "program": "${workspaceRoot}/target/debug/cities_heightfield_from_gsi"
+    , "args": [ "--longitude", "141.315714", "--latitude", "43.04724", "--out", "Maruyama_Sapporo_Hokkaido_Japan.png" ]
+    , "stopAtEntry": false
+    , "cwd": "${workspaceRoot}/target/debug/"
     , "environment": []
     , "externalConsole": false
     , "preLaunchTask": "cargo build debug"
