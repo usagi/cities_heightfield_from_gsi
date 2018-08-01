@@ -18,10 +18,16 @@ use lib_error::{ Error };
 
 pub fn empty_test() { }
 
-pub fn invoke_with_save_to_file( longitude: f64, latitude: f64, out_path: &str )
+pub fn invoke_with_save_to_file
+( longitude: f64
+, latitude: f64
+, out_path: &str
+, altitude_bias: f64
+, altitude_of_no_data: f64
+)
   -> Result< (), Error >
 {
-  let cropped_data = invoke( longitude, latitude )?;
+  let cropped_data = invoke( longitude, latitude, altitude_bias, altitude_of_no_data )?;
   let _ = save( &cropped_data, out_path )?;
   
   println!( "COMPLETED" );
@@ -29,13 +35,18 @@ pub fn invoke_with_save_to_file( longitude: f64, latitude: f64, out_path: &str )
   Ok( () )
 }
 
-pub fn invoke( longitude: f64, latitude: f64 )
+pub fn invoke
+( longitude: f64
+, latitude: f64
+, altitude_bias: f64
+, altitude_of_no_data: f64
+)
   -> Result< Vec< u16 >, Error >
 {
   let level_of_detail = 14;
   
   let ( loaded_data, loaded_width, meters_per_pixel, roi_width, roi_rx, roi_ry ) = 
-    load( longitude, latitude, level_of_detail )?;
+    load( longitude, latitude, level_of_detail, altitude_bias, altitude_of_no_data )?;
   
   let ( scaled_data, scaled_width ) = 
     scale( &loaded_data, loaded_width, roi_width, meters_per_pixel )?;
@@ -43,7 +54,13 @@ pub fn invoke( longitude: f64, latitude: f64 )
   Ok( crop( &scaled_data, scaled_width, roi_rx, roi_ry )? )
 }
 
-pub fn load( longitude: f64, latitude: f64, level_of_detail: u8 )
+pub fn load
+( longitude: f64
+, latitude: f64
+, level_of_detail: u8
+, altitude_bias: f64
+, altitude_of_no_data: f64
+)
   -> Result< ( Vec< u16 >, usize, f64, usize, f64, f64 ), Error >
 {
   let meters_per_pixel = web_mercator::meters_per_pixel( latitude, level_of_detail );
@@ -84,6 +101,8 @@ pub fn load( longitude: f64, latitude: f64, level_of_detail: u8 )
   println!("  : Target Tiles X-range [ {:>8} .. {:>8} ] ( in LOD=14 )", tx0, tx1 );
   println!("  : Target Tiles Y-range [ {:>8} .. {:>8} ] ( in LOD=14 )", ty0, ty1 );
   println!("  : Target Tiles Total Count {} [#] ", tiles_buffer_area );
+  println!("  : Altitude bias       {:>8} [m]", format!( "{:.3}", altitude_bias ) );
+  println!("  : Altitude of no data {:>8} [m]", format!( "{:.3}", altitude_of_no_data ) );
   
   let tx_end = tx1 + 1;
   let ty_end = ty1 + 1;
@@ -117,7 +136,14 @@ pub fn load( longitude: f64, latitude: f64, level_of_detail: u8 )
         {
           let source_address = source_address_dy + px;
           let destination_address = destination_address_dy + px;
-          loaded_data[ destination_address ] = cities_skylines::height_from_meter_to_value( a[ source_address ] );
+          
+          let v = 
+            match a[ source_address ]
+            { n if n.is_nan() => altitude_of_no_data
+            , n => n + altitude_bias
+            };
+          
+          loaded_data[ destination_address ] = cities_skylines::height_from_meter_to_value( v );
         }
       }
     }

@@ -16,6 +16,8 @@ fn main()
   ( arguments.longitude
   , arguments.latitude
   , &arguments.out
+  , arguments.altitude_bias
+  , arguments.altitude_of_no_data
   )
   { Ok( _ ) => println!("  : Succeeded" )
   , Err( e ) => println!("  : Failed; {:?}", e )
@@ -27,6 +29,8 @@ struct Arguments
 { longitude: f64
 , latitude: f64
 , out: String
+, altitude_bias: f64
+, altitude_of_no_data: f64
 , interactive: bool
 //, silent: bool
 }
@@ -42,11 +46,17 @@ fn interactive_mode()
   let latitude: f64 = read();
   println!( "  : Input the path of the output PNG file ( e.g. out.png )> " );
   let out_path: String = read();
+  println!( "  : Input the altitude bias in meters ( e.g. 40.0 )" );
+  let altitude_bias: f64 = read();
+  println!( "  : Input the altitude of no data in meters ( e.g. 0.0 )" );
+  let altitude_of_no_data: f64 = read();
   
   Arguments
   { longitude: longitude
   , latitude: latitude
   , out: out_path
+  , altitude_bias: altitude_bias
+  , altitude_of_no_data: altitude_of_no_data
   , interactive: true
   //, silent: false
   }
@@ -79,9 +89,11 @@ fn parse_args()
   
   let mut options = Options::new();
   
-  options.optopt( "", "longitude", "set longitude of a target", "141.315714" );
-  options.optopt( "", "latitude", "set latitude of a target", "43.04724" );
+  options.optopt( "x", "longitude", "set longitude of a target in degrees", "141.315714" );
+  options.optopt( "y", "latitude", "set latitude of a target in degrees", "43.04724" );
   options.optopt( "o", "out", "set output file path", "out.png" );
+  options.optopt( "b", "altitude_bias", "set an altitude bias in meters", "40.0" );
+  options.optopt( "n", "altitude_of_no_data", "set an altitude of no data in meter", "0.0" );
   options.optflag( "h", "help", "show this help" );
   options.optflag( "v", "version", "show the app version" );
   //options.optflag( "s", "silent", "make silent the app" );
@@ -107,10 +119,14 @@ fn parse_args()
   
   println!("  : Done." );
   
+  let to_number = | key, default | matches.opt_str( key ).unwrap_or( "".to_string() ).parse().unwrap_or( default );
+  
   Arguments
-  { longitude: matches.opt_str( "longitude" ).unwrap_or( "".to_string() ).parse().unwrap_or( std::f64::NAN )
-  , latitude: matches.opt_str( "latitude" ).unwrap_or( "".to_string() ).parse().unwrap_or( std::f64::NAN )
+  { longitude: to_number( "longitude", std::f64::NAN )
+  , latitude: to_number( "latitude", std::f64::NAN )
   , out: matches.opt_str( "out" ).unwrap_or( "out.png".to_string() )
+  , altitude_bias: to_number( "altitude_bias", 40.0 )
+  , altitude_of_no_data: to_number( "altitude_of_no_data", 0.0 )
   , interactive: ! has_lon && ! has_lat 
   //, silent: matches.opt_present( "s" )
   }
