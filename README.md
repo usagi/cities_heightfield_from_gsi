@@ -13,15 +13,19 @@ en / [ja](README.ja.md)
 `cui` executable:
 
 ```
-Usage (1) Interactive mode      : cui
-Usage (2) Direct Invocation mode: cui [options]
+Usage (1) Interactive mode      : cities_heightfield_from_gsi
+Usage (2) Direct Invocation mode: cities_heightfield_from_gsi [options]
 
 Options:
-        --longitude 141.315714
-                        set longitude of a target
-        --latitude 43.04724
-                        set latitude of a target
+    -x, --longitude 141.315714
+                        set longitude of a target in degrees
+    -y, --latitude 43.04724
+                        set latitude of a target in degrees
     -o, --out out.png   set output file path
+    -b, --altitude_bias 40.0
+                        set an altitude bias in meters
+    -n, --altitude_of_no_data 0.0
+                        set an altitude of no data in meter
     -h, --help          show this help
     -v, --version       show the app version
 ```
@@ -110,6 +114,10 @@ citis_heightfield_from_gsi --latitude 24.340661 --longitude 124.15558 --out Ishi
 ```
 cargo build --release
 ```
+
+## FAQ
+
+<https://github.com/usagi/cities_heightfield_from_gsi/wiki/FAQ> ( ja )
 
 ## License
 

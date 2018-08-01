@@ -13,15 +13,19 @@
 `cui` 実行:
 
 ```
-使い方 (1) 対話実行モード: cui
-使い方 (2) 直接実行モード: cui [options]
+使い方 (1) 対話実行モード: cities_heightfield_from_gsi
+使い方 (2) 直接実行モード: cities_heightfield_from_gsi [options]
 
 Options:
         --longitude 141.315714
-                        目標の経度を設定
+                        目標の経度(度)を設定
         --latitude 43.04724
-                        目標の緯度を設定
+                        目標の緯度(度)を設定
     -o, --out out.png   出力ファイルのパスを設定
+    -b, --altitude_bias 40.0
+                        標高に加算するバイアス値(m)を設定
+    -n, --altitude_of_no_data 0.0
+                        データなし領域に設定する標高値(m)を設定
     -h, --help          このヘルプを表示
     -v, --version       このアプリのバージョン情報を表示
 ```
@@ -110,6 +114,10 @@ citis_heightfield_from_gsi --latitude 24.340661 --longitude 124.15558 --out Ishi
 ```
 cargo build --release
 ```
+
+## FAQ
+
+<https://github.com/usagi/cities_heightfield_from_gsi/wiki/FAQ> ( 日本語 )
 
 ## ライセンス
 
